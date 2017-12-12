@@ -1,6 +1,6 @@
 Package: webwork
 Title: Utilities for Working with WeBWorK
-Version: 0.0.0.9000
+Version: 0.0.0.9001
 Authors@R: person("Randall", "Pruim", email = "rpruim@gmail.com", role = c("aut", "cre"))
 Description: These utilities simplify generating class lists for and 
     processing gradebook data from WeBWork.
