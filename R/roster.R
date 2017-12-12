@@ -1,18 +1,18 @@
 
 #' Roster utilities
 #'
-#' @param user User IDs (required).
-#' @param student_id Student IDs (may be left blank).
 #' @param email Email address (may be left blank).
+#' @param user User IDs (required).
+#' @param id Student IDs (may be left blank).
 #' @param last_name Last name (may be left blank).
 #' @param first_name First name (may be left blank).
-#' @param status Status code: 0 for student, 10 for instructor, etc.
+#' @param password Passwords (defaults to `student_id`).
+#' @param permission Permission code: Use -5 for guest, 0 for student, 2 for login proctor, 3for grade proctor, 5 for teaching assistant, 10 for professor.
+#' @param status One of `"current"`, `"enrolled"`, `"audit"`, `"drop"`.  (Can use c/a/d.)
 #' @param comment A comment (may be left blank).
 #' @param section Section desriptor (may be left blank).
 #' @param recitation Recitaiton descriptor (may be left blank).
-#' @param password Passwords (defaults to `student_id`).
-#' @param permission Use -5 for guest, 0 for student, 2 for login proctor, 3for grade proctor, 5 for teaching assistant, 10 for professor.
-#' @param status One of `"current"`, `"enrolled"`, `"audit"`, `"drop"`.  (Can use c/a/d.)
+#' @importFrom dplyr data_frame
 #' @export
 
 ww_roster <-

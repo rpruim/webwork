@@ -14,25 +14,23 @@ ww_roster(email = "", user = sapply(stringr::str_split(email, "@"),
 
 \item{user}{User IDs (required).}
 
+\item{id}{Student IDs (may be left blank).}
+
 \item{last_name}{Last name (may be left blank).}
 
 \item{first_name}{First name (may be left blank).}
 
 \item{password}{Passwords (defaults to `student_id`).}
 
-\item{permission}{Use -5 for guest, 0 for student, 2 for login proctor, 3for grade proctor, 5 for teaching assistant, 10 for professor.}
+\item{permission}{Permission code: Use -5 for guest, 0 for student, 2 for login proctor, 3for grade proctor, 5 for teaching assistant, 10 for professor.}
 
-\item{status}{Status code: 0 for student, 10 for instructor, etc.}
+\item{status}{One of `"current"`, `"enrolled"`, `"audit"`, `"drop"`.  (Can use c/a/d.)}
 
 \item{comment}{A comment (may be left blank).}
 
 \item{section}{Section desriptor (may be left blank).}
 
 \item{recitation}{Recitaiton descriptor (may be left blank).}
-
-\item{student_id}{Student IDs (may be left blank).}
-
-\item{status}{One of `"current"`, `"enrolled"`, `"audit"`, `"drop"`.  (Can use c/a/d.)}
 }
 \description{
 Roster utilities
