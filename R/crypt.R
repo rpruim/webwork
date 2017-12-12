@@ -1,12 +1,4 @@
-#' Create crypted passwords
-#'
-#' Create cypted passwords for use with WeBWorK class lists.
-#'
-#' @rdname crypt
-#' @param plaintext Plain text to be hashed
-#' @param salt Currently ignored.  Salt is generated randomly.
-#'
-#' @export
+
 crypt1 <- function(plaintext, salt = NULL ) {
 
   if (is.null(salt)) {
@@ -32,5 +24,19 @@ crypt1 <- function(plaintext, salt = NULL ) {
   system(command, intern = TRUE)
 }
 
+#' Create crypted passwords
+#'
+#' WeBWorK passwords must be crypted with a 1-way hash. `crypt()` is a wrapper around the suggested perl code
+#' for performing the crypting.
+#'
+#' @param plaintext Plain text to be hashed
+#' @param salt A two-character string used as "salt" for the hash.  If `NULL`, salt is randomly generated.
+#' @rdname crypt
+#' @examples
+#' crypt("plaintext")
+#' crypt("plaintext", salt = "N7")
+#' crypt("plaintext", salt = "Xa")
+#' crypt(LETTERS)
 #' @export
+
 crypt <- Vectorize(crypt1)
