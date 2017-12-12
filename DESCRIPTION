@@ -5,7 +5,10 @@ Authors@R: person("Randall", "Pruim", email = "rpruim@gmail.com", role = c("aut"
 Description: These utilities simplify generating class lists for and 
     processing gradebook data from WeBWork.
 Depends: R (>= 3.4.2)
-License: MIT
+Imports: 
+    dplyr,
+    utils
+License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 6.0.1.9000
